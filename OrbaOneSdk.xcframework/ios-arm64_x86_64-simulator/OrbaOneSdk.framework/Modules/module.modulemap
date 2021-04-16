@@ -1,0 +1,11 @@
+framework module OrbaOneSdk {
+  umbrella header "OrbaOneSdk.h"
+
+  export *
+  module * { export * }
+}
+
+module OrbaOneSdk.Swift {
+    header "OrbaOneSdk-Swift.h"
+    requires objc
+}

@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "OrbaOneSdk"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "The Official Orba One iOS pod for integrating document and video capture."
   spec.description  = <<-DESC
   Orba One is a suite of customizable user identification tools including liveness detection, document verification, facial recognition, and more. These tools are combined to estimate the authenticity of a User's Identity shared with you.
