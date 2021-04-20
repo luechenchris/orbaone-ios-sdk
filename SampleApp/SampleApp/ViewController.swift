@@ -32,8 +32,6 @@ class ViewController: UIViewController {
                 }
             })
             try sdk.startVerification(origin: self)
-//            self.present(IntroViewController(), animated: true, completion: nil)
-//            self.navigationController?.pushViewController(IntroViewController(), animated: true)
         } catch let error {
             print("Flow not started. Error: \(error)")
         }

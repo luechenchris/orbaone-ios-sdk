@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   OrbaOneSdk:
-    :commit: 015d1cdf2828babb55f4642c8b4b854ac9224270
+    :commit: 3d0288652be408a07e7e7cb2927172e6e7dcd9f3
     :git: https://github.com/luechenchris/orbaone-ios-sdk.git
 
 SPEC CHECKSUMS:
