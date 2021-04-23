@@ -19,7 +19,7 @@ To install the SDK using CocoaPods, add the following to your xcode project's po
 pod 'OrbaOneSdk'
 ```
 
-Then run `Pod Install` to retrieve the sdk.
+Then run `pod install` to retrieve the sdk.
 
 ## 3. Configuring the SDK
 
@@ -72,7 +72,7 @@ The Orba One SDK exposes four callbacks to the mobile app. Each can be used to c
 ```
 ## 5. Customizing the Flow
 
-To customize the verification flow, you can make use of the SDK's config builder function. All customization must be done before starting the flow.
+To customize the verification flow, you can make use of the SDK's config builder function. All customization must be done before starting the verification.
 
 ```swift
 
