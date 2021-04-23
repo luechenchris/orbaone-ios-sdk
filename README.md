@@ -13,7 +13,7 @@ The SDK supports the following configurations:
 
 ## 2. Install as a CocoaPod
 
-To install the SDK using CocoaPods, add the following to your xcode project's podfile:
+To install the SDK using CocoaPods, add the following to the application's podfile:
 
 ```
 pod 'OrbaOneSdk'
@@ -21,7 +21,18 @@ pod 'OrbaOneSdk'
 
 Then run `pod install` to retrieve the sdk.
 
-## 3. Configuring the SDK
+## 3. App Permissions
+
+The Orba One SDK requires that the following permissions be added to the application's `info.plist` file:
+
+```
+<key>NSCameraUsageDescription</key>
+<string>Required for Facial and Document capture.</string>
+<key>NSMicrophoneUsageDescription</key>
+<string>Required for Audio capture.</string>>
+```
+
+## 4. Configuring the SDK
 
 The Orba One SDK uses a **publishable api key** and an **applicant id** that you can obtain from your vendor dashboard. Your publishable api key will be needed in order to initialize the SDK in your mobile app. A sample implementation is shown below.
 
@@ -48,7 +59,7 @@ do {
 }
 ```
 
-## 4. SDK Responses
+## 5. SDK Responses
 
 The Orba One SDK exposes four callbacks to the mobile app. Each can be used to coordinate user feedback at various stages of the SDK's lifecycle.
 
@@ -70,7 +81,7 @@ The Orba One SDK exposes four callbacks to the mobile app. Each can be used to c
         }
     }
 ```
-## 5. Customizing the Flow
+## 6. Customizing the Flow
 
 To customize the verification flow, you can make use of the SDK's config builder function. All customization must be done before starting the verification.
 
