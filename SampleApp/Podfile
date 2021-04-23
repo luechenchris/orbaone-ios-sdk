@@ -6,5 +6,5 @@ target 'SampleApp' do
   use_frameworks!
 
   # Pods for SampleApp
-  pod 'OrbaOneSdk', '0.0.1'
+  pod 'OrbaOneSdk', '0.0.2'
 end
