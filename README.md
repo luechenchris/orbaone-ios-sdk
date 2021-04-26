@@ -53,7 +53,14 @@ do {
             print("Flow encounterd an error: \(error)")
         }
     })
-    try sdk.startVerification(origin: self)
+
+    var presentationStyle: UIModalPresentationStyle = .fullScreen
+            
+    if UIDevice.current.userInterfaceIdiom == .pad {
+        presentationStyle = .formSheet
+    }
+    
+    try sdk.startVerification(origin: self, style: presentationStyle)
 } catch let error {
     print("Flow not started. Error: \(error)")
 }

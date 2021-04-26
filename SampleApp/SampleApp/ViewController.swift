@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startButton(_ sender: Any) {
-        let config = OrbaOneConfig().setApiKey("da66128c2b32421e94090b32889ce656").setApplicantId("GUEST").setFlow([.INTRO, .ID, .FACESCAN]).build()
+        let config = OrbaOneConfig().setApiKey("PUBLIC-KEY").setApplicantId("APPLICANT-ID").setFlow([.INTRO, .ID, .FACESCAN]).build()
         do {
             let sdk = try OrbaOneFlow(configuration: config)
             sdk.with(responseHandler: {response in
@@ -31,7 +31,14 @@ class ViewController: UIViewController {
                     print("Flow encounterd an error: \(error)")
                 }
             })
-            try sdk.startVerification(origin: self)
+            
+            var presentationStyle: UIModalPresentationStyle = .fullScreen
+            
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                presentationStyle = .formSheet
+            }
+            
+            try sdk.startVerification(origin: self, style: presentationStyle)
         } catch let error {
             print("Flow not started. Error: \(error)")
         }
