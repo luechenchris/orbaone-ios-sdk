@@ -29,7 +29,7 @@ The Orba One SDK requires that the following permissions be added to the applica
 <key>NSCameraUsageDescription</key>
 <string>Required for Facial and Document capture.</string>
 <key>NSMicrophoneUsageDescription</key>
-<string>Required for Audio capture.</string>>
+<string>Required for Audio capture.</string>
 ```
 
 ## 4. Configuring the SDK
