@@ -105,6 +105,29 @@ let config = OrbaOneConfig().setApiKey("publishable-api-key").setApplicantId("ap
 try sdk.startVerification(origin: self)
 ```
 
+## 7. Customizing the Theme
+
+To ensure that Orba One fits in to your app's existing user experience, you can customize various colors by specifying a theme configuration.
+
+```swift
+let appearance = Theme(
+    colorPrimary: <UIColor>,
+    colorTextPrimary: <UIColor>,
+    colorButtonPrimary: <UIColor>,
+    colorButtonPrimaryText: <UIColor>,
+    colorButtonPrimaryPressed: <UIColor>,
+    enableDarkMode: <true | false>)
+
+let config = OrbaOneConfig().setAppearance(appearance).build()
+```
+
+```colorPrimary```: Defines the primary accent color for bullet points and highlights.\
+```colorTextPrimary```: Defines the text color of Titles.\
+```colorButtonPrimary```: Defines the background color of Primary Buttons and the text color of Secondary Buttons.\
+```colorButtonPrimaryText```: Defines the text color of Primary Buttons.\
+```colorButtonPrimaryPressed```: Defines the background color of Primary Buttons when pressed.\
+```enableDarkMode```: Defines the dark mode allowed setting for the SDK.\
+
 ## Sample App
 A sample app demonstrating the Orba One SDK's implementation has been included. See the SampleApp directory for the Swift implementation.
 
