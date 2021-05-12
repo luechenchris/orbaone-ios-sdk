@@ -149,7 +149,7 @@ let config = OrbaOneConfig().setAppearance(appearance).build()
 ```colorButtonPrimary```: Defines the background color of Primary Buttons and the text color of Secondary Buttons.\
 ```colorButtonPrimaryText```: Defines the text color of Primary Buttons.\
 ```colorButtonPrimaryPressed```: Defines the background color of Primary Buttons when pressed.\
-```enableDarkMode```: Defines the dark mode allowed setting for the SDK.\
+```enableDarkMode```: Defines the dark mode allowed setting for the SDK.
 
 ## Sample App
 A sample app demonstrating the Orba One SDK's implementation has been included. See the SampleApp directory for the Swift implementation.
