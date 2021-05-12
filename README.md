@@ -106,7 +106,7 @@ try sdk.startVerification(origin: self)
 ```
 
 ## 7. Customizing the Document Capture Step
-To customize the document capture step, you can simply make use of the sdk's DocumentCaptureStep builder class. By using this builder class, you are able to exclude specified documents and countries from the capture flow. All customization must be done before starting the flow.
+To customize the document capture step, you can simply make use of the sdk's DocumentCaptureConfig builder class. By using this builder class, you are able to exclude specified documents and countries from the capture flow. All customization must be done before starting the flow.
 
 ``` swift
 let documentStep = DocumentCaptureConfig()
