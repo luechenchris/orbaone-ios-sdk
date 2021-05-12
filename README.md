@@ -101,11 +101,34 @@ let flowSteps: [Step] = [
 ]
 
 let config = OrbaOneConfig().setApiKey("publishable-api-key").setApplicantId("applicant-id").setFlow(flowSteps).build()
-
+let sdk = try OrbaOneFlow(configuration: config)
 try sdk.startVerification(origin: self)
 ```
 
-## 7. Customizing the Theme
+## 7. Customizing the Document Capture Step
+To customize the document capture step, you can simply make use of the sdk's DocumentCaptureStep builder class. By using this builder class, you are able to exclude specified documents and countries from the capture flow. All customization must be done before starting the flow.
+
+``` swift
+let documentStep = DocumentCaptureConfig()
+    .excludeDocumennt([
+        .PASSPORT, // this will remove the Passport option
+        .DRIVERSLICENSE, // this will remove the Driver's License option
+        .NATIONALID // this will remove the National ID option
+    ])
+    .excludeCountry([
+        .JM, // this will remove Jamaica from the list of available countries
+        .US // this will remove the United States from the list of available countries
+    ]).build()
+let config = OrbaOneConfig()
+    .setApiKey("publishable-api-key")
+    .setApplicantId("applicant-id")
+    .supportsDocument(documentStep)
+    .build()
+let sdk = try OrbaOneFlow(configuration: config)
+try sdk.startVerification(origin: self)
+```
+
+## 8. Customizing the Theme
 
 To ensure that Orba One fits in to your app's existing user experience, you can customize various colors by specifying a theme configuration.
 
