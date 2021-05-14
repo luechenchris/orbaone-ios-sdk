@@ -95,9 +95,10 @@ To customize the verification flow, you can make use of the SDK's config builder
 ```swift
 
 let flowSteps: [Step] = [
-  Step.INTRO, // Welcome step - gives your user a short overview of the flow. [Optional, Default].
-  Step.ID, // Photo ID step - captures the user's identification document. [Default].
-  Step.FACESCAN, // Selfie Video step - captures a video of the user for liveness detection. [Default].
+    Step.INTRO, // Welcome step - gives your user a short overview of the flow. [Optional, Default].
+    Step.ID, // Photo ID step - captures the user's identification document. [Default].
+    Step.FACESCAN, // Selfie Video step - captures a video of the user for liveness detection. [Default].
+    Step.COMPLETE // Final Step - informs the user that the verification process is completed. [Optional].
 ]
 
 let config = OrbaOneConfig().setApiKey("publishable-api-key").setApplicantId("applicant-id").setFlow(flowSteps).build()
@@ -152,7 +153,7 @@ let config = OrbaOneConfig().setAppearance(appearance).build()
 ```enableDarkMode```: Defines the dark mode allowed setting for the SDK.
 
 ## Sample App
-A sample app demonstrating the Orba One SDK's implementation has been included. See the SampleApp directory for the Swift implementation.
+A sample app demonstrating the Orba One SDK's implementation has been included. See the [SampleApp directory](https://github.com/orbaone/orbaone-ios-sdk/tree/main/SampleApp) for the Swift implementation.
 
 ## Support
 
