@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startButton(_ sender: Any) {
-        let config = OrbaOneConfig().setApiKey("PUBLIC-KEY").setApplicantId("APPLICANT-ID").setFlow([.INTRO, .ID, .FACESCAN]).build()
+        let config = OrbaOneConfig().setApiKey("PUBLIC-KEY").setApplicantId("GUEST").setFlow([.INTRO, .ID, .FACESCAN]).build()
         do {
             let sdk = try OrbaOneFlow(configuration: config)
             sdk.with(responseHandler: {response in
