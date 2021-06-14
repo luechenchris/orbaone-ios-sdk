@@ -111,7 +111,7 @@ To customize the document capture step, you can simply make use of the sdk's Doc
 
 ``` swift
 let documentStep = DocumentCaptureConfig()
-    .excludeDocumennt([
+    .excludeDocument([
         .PASSPORT, // this will remove the Passport option
         .DRIVERSLICENSE, // this will remove the Driver's License option
         .NATIONALID // this will remove the National ID option
