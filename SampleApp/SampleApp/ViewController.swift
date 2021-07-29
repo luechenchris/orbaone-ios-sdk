@@ -28,7 +28,25 @@ class ViewController: UIViewController {
                 case .start:
                     print("Flow started.")
                 case .error(let error):
-                    print("Flow encounterd an error: \(error)")
+                    switch error {
+                    case .exception(withMessage: let message):
+                       print("\(message)")
+                    case .API_KEY_MISSING:
+                        print("Publishable key missing.")
+                    case .API_KEY_INVALID:
+                        print("Publishable key is invalid.")
+                    case .USER_INVALID:
+                        print("Applicant id is invalid.")
+                    case .USER_CANCELLED:
+                        print("Applicant cancelled verification.")
+                    case .API_NOT_AVAILABLE:
+                        print("Orba One servers are unreachable.")
+                    case .UPLOAD_INVALID:
+                        print("Upload data is corrupted or missing meta data.")
+                    @unknown default:
+                        print("An unknown error occured.")
+                    }
+                break;
                 }
             })
             
