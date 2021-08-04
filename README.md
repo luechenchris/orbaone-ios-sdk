@@ -83,8 +83,26 @@ The Orba One SDK exposes four callbacks to the mobile app. Each can be used to c
             // A new verification flow was started by the user.
             print("Flow started.")
         case .error(let error):
-            // An attempt was made to begin the verification flow but it failed.
-            print("Flow encounterd an error: \(error)")
+            // An error occured while the verification flow was in progress.
+            switch error {
+                case .exception(withMessage: let message):
+                    print("\(message)")
+                case .API_KEY_MISSING:
+                    print("Publishable key missing.")
+                case .API_KEY_INVALID:
+                    print("Publishable key is invalid.")
+                case .USER_INVALID:
+                    print("Applicant id is invalid.")
+                case .USER_CANCELLED:
+                    print("Applicant cancelled verification.")
+                case .API_NOT_AVAILABLE:
+                    print("Orba One servers are unreachable.")
+                case .UPLOAD_INVALID:
+                    print("Upload data is corrupted or missing meta data.")
+                @unknown default:
+                    print("An unknown error occured.")
+                }
+        break;
         }
     }
 ```
