@@ -4,9 +4,9 @@ Orba One's Document and Video Capture for Identity Verification in Swift.
 ## 1. Platform Requirements
 
 The SDK supports the following configurations:
-- SDK supports iOS 13+
-- SDk supports Xcode 11.5+
-- SDK supports the following presentation styles:
+- Supports iOS 13+
+- Supports Xcode 11.5+
+- Supports the following presentation styles:
     - Fullscreen for iPhones
     - Fullscreen and Form Sheet for iPads
 
